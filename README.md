@@ -102,11 +102,6 @@ it's replacing" gap from earlier versions of the project.
 These are worth knowing because each one represents a real, general C
 pitfall, not just a typo:
 
-- **`typedef struct` tag-vs-alias confusion** — a self-referential struct
-  (a header containing a pointer to another header) needs a **tag** name
-  usable *inside* the struct body, separate from the **typedef** alias
-  usable everywhere else. Conflating the two, or omitting one, doesn't
-  compile — and got mixed up several different ways before landing right.
 - **Arithmetic on `void*`** — not valid in standard C; every byte-offset
   computation needs a `char*` (or explicit cast) first.
 - **Footer→header address arithmetic off-by-one** — the correct formula is
